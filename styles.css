@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@font-face {
+    font-family: 'RetroComputer';
+    src: url('./assets/font/retro_computer_personal_use.ttf') format('truetype');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Sans Mono', monospace;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0); /* semi-transparent overlay */
+}
+
+#startButton {
+    font-size: 24px;
+    padding: 12px 24px;
+    background-color: #00000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#video-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1000;
+}
+
+#content {
+    z-index: 1000;
+    text-align: center;
+    color: white;
+}
+
+
+.blurred-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px); /* For other browsers */
+    user-select: none;
+}
+
+
+.blurred-box img {
+    width: 100px; /* Adjust the width of the profile picture as needed */
+    height: 100px; /* Adjust the height of the profile picture as needed */
+    border-radius: 10%; /* Make the profile picture round */
+    margin-bottom: 10px; /* Add some space between the profile picture and the text */
+    display: block;
+    margin: 0 auto; /* Center the profile picture horizontally */
+    user-select: none;
+}
+
+.blurred-box h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.clock {
+    font-family: 'RetroComputer', Arial, sans-serif; /* Change the font here */
+    font-size: 30px;
+    position: absolute;
+    top: 10px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    animation: fadeInOut 1s infinite alternate;
+}
+
+/* Keyframe animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Color change animation */
+@keyframes changeColor {
+    0% {
+        color: #27fdf5; /* Light Blue */
+    }
+    25% {
+        color: #a8f6f8; /* Light Cyan */
+    }
+    50% {
+        color: #d7fffe; /* Very Light Cyan */
+    }
+    75% {
+        color: #f98dc9; /* Pink */
+    }
+    100% {
+        color: #f765b8; /* Pink */
+    }
+}
+
+/* Apply animations to each number */
+.clock:nth-child(1) {
+    animation: fadeInOut 5s infinite alternate, changeColor 5s infinite alternate;
+}
+.clock:nth-child(2) {
+    animation: fadeInOut 5s infinite alternate, changeColor 5s infinite alternate;
+}
+.clock:nth-child(3) {
+    animation: fadeInOut 5s infinite alternate, changeColor 5s infinite alternate;
+}
+.clock:nth-child(4) {
+    animation: fadeInOut 5s infinite alternate, changeColor 5s infinite alternate;
+}
+.clock:nth-child(5) {
+    animation: fadeInOut 5s infinite alternate, changeColor 5s infinite alternate;
+}
+.clock:nth-child(6) {
+    animation: fadeInOut 5s infinite alternate, changeColor 5s infinite alternate;
+}
+
+.game-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.game-details p {
+    margin: 5px 0;
+}
+
+.game-image {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.special-message {
+    font-family: 'RetroComputer', Arial, sans-serif; /* Change the font here */
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    color: white;
+}
+
+.fake-activity-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between links */
+}
+
+.fake-activity-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set link color */
+}
+
+.fake-activity-links a i {
+    font-size: 24px; /* Adjust the icon size */
+}
