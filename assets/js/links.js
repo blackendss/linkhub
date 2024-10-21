@@ -1,9 +1,9 @@
 // links.js
 
 const links = [
-    { url: 'https://open.spotify.com/artist/3AudxXmyJozkw5uqo7fkT0?si=aZ0ZMGP-Sv2RIIBWagCZ_Q', iconClass: 'fab fa-spotify' },
+    { url: 'https://soundcloud.com/toth-levente-341796005', iconClass: 'fab fa-soundcloud' },
     { url: 'https://steamcommunity.com/id/blackendss666/', iconClass: 'fab fa-steam' },
-    { url: 'https://discord.gg/HKjFD6RD', iconClass: 'fab fa-discord' }
+    { url: 'https://www.instagram.com/___.fentanyl.___/', iconClass: 'fab fa-instagram' }
 ];
 
 function createLinks() {
